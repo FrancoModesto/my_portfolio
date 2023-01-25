@@ -1,5 +1,13 @@
 //VARIABLES
-//...
+$myFont: "Josefin Sans", sans-serif;
+$mySecondFont: "Dancing Script", cursive;
+
+$myWhite: whitesmoke;
+$myGrey: rgb(190, 190, 190);
+$myBlack: rgb(31, 31, 31);
+$myPurple: rgb(85, 40, 185);
+$myDarkPurple: rgb(30, 0, 50);
+$myLightPurple: rgb(130, 75, 165);
 
 //**********************
 //ALL
@@ -10,4 +18,133 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: $myLightPurple;
+    color: $myWhite;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $myDarkPurple;
+    font-size: 16px;
+    font-family: $myFont;
+    color: $myWhite;
+    font-weight: 300;
+}
+
+//**********************
+//HEADER
+header {
+    width: 100%;
+    position: fixed;
+
+    nav {
+        width: 100%;
+        height: 4em;
+
+        ul {
+            width: 100%;
+            height: 100%;
+
+            list-style-type: none;
+            background-color: $myPurple;
+            box-shadow: 0 0 2em $myPurple;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5em;
+
+            li {
+                a {
+                    position: relative;
+
+                    text-decoration: none;
+                    color: $myGrey;
+                    font-size: 1.25rem;
+                    padding: 0 2px 0 2px;
+
+                    transition: all 0.3s ease;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+
+                        background-color: $myWhite;
+                        height: 2px;
+                        width: 0;
+
+                        transition: all 0.3s ease;
+                    }
+
+                    &:hover {
+                        color: $myWhite;
+                        text-shadow: 0 0 3px $myWhite;
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                        box-shadow: 0 0 3px $myWhite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//**********************
+//MAIN
+.presentation {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../assets/images/profile/fondo.png);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .photo {
+        width: 15em;
+        height: 15em;
+        margin-bottom: 1.5em;
+
+        background-color: $myWhite;
+        border-radius: 100%;
+        box-shadow: 0 0 20px $myWhite;
+
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-family: $mySecondFont;
+        font-weight: 700;
+        font-size: 4rem;
+        text-shadow: 0 0 10px $myWhite;
+
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 2rem;
+        text-shadow: 0 0 15px $myWhite;
+    }
+}
+
+.other {
+    width: 100%;
+    height: 100vh;
 }
