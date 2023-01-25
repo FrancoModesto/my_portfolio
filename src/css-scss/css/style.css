@@ -8,7 +8,7 @@
 }
 
 ::selection {
-  background-color: #824ba5;
+  background-color: #4b325a;
   color: whitesmoke;
 }
 
@@ -76,7 +76,7 @@ header nav ul li a:hover:after {
 .presentation {
   width: 100%;
   height: 100vh;
-  background-image: url(../../../assets/images/profile/fondo.png);
+  background-color: #1e0032;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,7 +86,7 @@ header nav ul li a:hover:after {
 .presentation .photo {
   width: 15em;
   height: 15em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   background-color: whitesmoke;
   border-radius: 100%;
   box-shadow: 0 0 20px whitesmoke;
@@ -105,7 +105,7 @@ header nav ul li a:hover:after {
   font-weight: 700;
   font-size: 4rem;
   text-shadow: 0 0 10px whitesmoke;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .presentation h2 {

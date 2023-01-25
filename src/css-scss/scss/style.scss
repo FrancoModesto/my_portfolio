@@ -7,7 +7,7 @@ $myGrey: rgb(190, 190, 190);
 $myBlack: rgb(31, 31, 31);
 $myPurple: rgb(85, 40, 185);
 $myDarkPurple: rgb(30, 0, 50);
-$myLightPurple: rgb(130, 75, 165);
+$myLightPurple: rgb(75, 50, 90);
 
 //**********************
 //ALL
@@ -101,7 +101,7 @@ header {
 .presentation {
     width: 100%;
     height: 100vh;
-    background-image: url(../../../assets/images/profile/fondo.png);
+    background-color: $myDarkPurple;
 
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@ header {
     .photo {
         width: 15em;
         height: 15em;
-        margin-bottom: 1.5em;
+        margin-bottom: 1.2em;
 
         background-color: $myWhite;
         border-radius: 100%;
@@ -132,8 +132,7 @@ header {
         font-weight: 700;
         font-size: 4rem;
         text-shadow: 0 0 10px $myWhite;
-
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     h2 {
