@@ -49,7 +49,7 @@ header nav ul li a {
   font-weight: 400;
   font-size: 1.25rem;
   color: #bebebe;
-  padding: 0 2px 0 2px;
+  padding: 0 5px 0 5px;
   transition: all 0.3s ease;
 }
 
@@ -66,12 +66,12 @@ header nav ul li a:after {
 
 header nav ul li a:hover {
   color: whitesmoke;
-  text-shadow: 0 0 5px whitesmoke;
+  text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
 }
 
 header nav ul li a:hover:after {
   width: 100%;
-  box-shadow: 0 0 5px whitesmoke;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
 }
 
 .inicio {
