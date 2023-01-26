@@ -106,17 +106,21 @@ header nav ul li a:hover:after {
   width: 15em;
   height: 15em;
   margin-bottom: 1em;
-  background-color: whitesmoke;
   border: 5px solid whitesmoke;
   border-radius: 100%;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke, 0 0 50px whitesmoke;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
   overflow: hidden;
+  transition: all 1s ease;
 }
 
 .inicio .profile .photo img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.inicio .profile .photo:hover {
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke, 0 0 50px whitesmoke;
 }
 
 .inicio .profile h1 {
@@ -126,6 +130,11 @@ header nav ul li a:hover:after {
   font-size: 4rem;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
   margin-bottom: 5px;
+  transition: all 1s ease;
+}
+
+.inicio .profile h1:hover {
+  text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke, 0 0 50px whitesmoke;
 }
 
 .inicio .profile h2 {
@@ -133,6 +142,18 @@ header nav ul li a:hover:after {
   font-weight: 400;
   font-size: 2rem;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
+  animation: flicker 5s infinite forwards;
+}
+
+@keyframes flicker {
+  30% {
+    color: #bebebe;
+    text-shadow: none;
+  }
+  100% {
+    color: whitesmoke;
+    text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
+  }
 }
 
 .inicio svg {

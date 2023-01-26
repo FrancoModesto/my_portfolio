@@ -134,17 +134,21 @@ header {
             height: 15em;
             margin-bottom: 1em;
 
-            background-color: $myWhite;
             border: 5px solid $myWhite;
             border-radius: 100%;
-            box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite, 0 0 50px $myWhite;
+            box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
 
             overflow: hidden;
+            transition: all 1s ease;
 
             img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+            }
+
+            &:hover {
+                box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite, 0 0 50px $myWhite;
             }
         }
 
@@ -155,6 +159,12 @@ header {
             font-size: 4rem;
             text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
             margin-bottom: 5px;
+
+            transition: all 1s ease;
+
+            &:hover {
+                text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite, 0 0 50px $myWhite;
+            }
         }
 
         h2 {
@@ -162,6 +172,19 @@ header {
             font-weight: 400;
             font-size: 2rem;
             text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
+
+            animation: flicker 5s infinite forwards;
+        }
+
+        @keyframes flicker {
+            30% {
+                color: $myGrey;
+                text-shadow: none;
+            }
+            100% {
+                color: $myWhite;
+                text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
+            }
         }
     }
 
