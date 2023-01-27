@@ -82,6 +82,7 @@ h2 {
 .inicio {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
 .inicio .fix {
