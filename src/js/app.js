@@ -15,7 +15,7 @@ menuHbtn.addEventListener("click", () => {
 
 //This fixes an issue caused by opening the menuH, closing it, and then resizing to > 800px resolutions (the nav stayed in -50vh).
 window.addEventListener("resize", () => {
-    if (window.screen.width > 800) {
+    if (window.innerWidth > 800) {
         nav.style.transform = "translateY(0)"
         on = false
     } else {
