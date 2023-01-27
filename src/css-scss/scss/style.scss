@@ -41,21 +41,10 @@ header {
     position: fixed;
     z-index: 1;
 
-    //This fixes the blur lag issue.
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000;
-    transform: translate3d(0, 0, 0);
-    transform: translateZ(0);
-
     nav {
         height: 4em;
 
-        backdrop-filter: blur(3px);
-        background-color: rgba(31, 0, 51, 0.8);
+        background-color: rgba(31, 0, 51, 0.9);
         border-bottom: 2px solid $myWhite;
         box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite;
 
