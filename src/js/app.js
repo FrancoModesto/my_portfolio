@@ -5,10 +5,10 @@ const nav = document.querySelector("nav")
 let on = false
 menuHbtn.addEventListener("click", () => {
     if (on) {
-        nav.style.top = "-50vh"
+        nav.style.transform = "translateY(-50vh)"
         on = false
     } else {
-        nav.style.top = "0"
+        nav.style.transform = "translateY(0)"
         on = true
     }
 })
