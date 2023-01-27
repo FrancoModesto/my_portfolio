@@ -85,35 +85,40 @@ h2 {
   overflow: hidden;
 }
 
-.inicio .fix {
+.inicio .fix-parallax {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 99vh;
+  height: 99%;
   overflow: hidden;
 }
 
-.inicio .fix .parallax {
+.inicio .fix-parallax .parallax {
   height: 130vh;
   background-image: url(../../../assets/images/profile/background.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.inicio .profile {
+.inicio .fix-profile {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
   width: 100%;
+  height: 99%;
+  overflow: hidden;
+}
+
+.inicio .fix-profile .profile {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.inicio .profile .photo {
+.inicio .fix-profile .profile .photo {
   width: 15em;
   height: 15em;
   margin-bottom: 1em;
@@ -125,13 +130,13 @@ h2 {
   animation: flicker 5s infinite forwards;
 }
 
-.inicio .profile .photo img {
+.inicio .fix-profile .profile .photo img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.inicio .profile h1 {
+.inicio .fix-profile .profile h1 {
   text-align: center;
   font-family: "Dancing Script", cursive;
   font-weight: 700;
@@ -142,7 +147,7 @@ h2 {
   animation: text_flicker 5s infinite forwards;
 }
 
-.inicio .profile h2 {
+.inicio .fix-profile .profile h2 {
   font-size: 2rem;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
   animation: text_flicker 5s infinite forwards;
