@@ -1,24 +1,17 @@
 //HAMBURGUER MENU
-if (window.screen.width < 800) {
-    const menuHbtn = document.querySelector(".menuH-btn")
-    const nav = document.querySelector("nav")
-    const menu = document.querySelector("nav ul")
+const menuHbtn = document.querySelector(".menuH-btn")
+const nav = document.querySelector("nav")
 
-    let on = false
-    nav.addEventListener("click", () => {
-        if (on) {
-            nav.style.height = "4em"
-            menu.style.top = "-50vh"
-            menuHbtn.style.opacity = "1"
-            on = false
-        } else {
-            nav.style.height = "50vh"
-            menu.style.top = "0"
-            menuHbtn.style.opacity = "0"
-            on = true
-        }
-    })
-}
+let on = false
+menuHbtn.addEventListener("click", () => {
+    if (on) {
+        nav.style.top = "-50vh"
+        on = false
+    } else {
+        nav.style.top = "0"
+        on = true
+    }
+})
 
 
 //PARALLAX
