@@ -2,7 +2,7 @@
 $myFont: "Josefin Sans", sans-serif;
 $mySecondFont: "Dancing Script", cursive;
 
-$myWhite: whitesmoke;
+$myWhite: rgb(245, 245, 245);
 $myGrey: rgb(190, 190, 190);
 $myBlack: rgb(31, 31, 31);
 $myPurple: rgb(85, 40, 185);
@@ -44,13 +44,18 @@ header {
     nav {
         height: 4em;
 
+        backdrop-filter: blur(5px);
+        background-color: rgba(31, 0, 51, 0.8);
+        border-bottom: 2px solid $myWhite;
+        box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite;
+
+        .menuH-btn {
+            display: none;
+        }
+
         ul {
             height: 100%;
-
             list-style-type: none;
-            background-color: $myDarkPurple;
-            border-bottom: 2px solid $myWhite;
-            box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite;
 
             display: flex;
             align-items: center;
@@ -225,4 +230,45 @@ h2 {
 .other {
     width: 100%;
     height: 100vh;
+}
+
+//**********************
+//MEDIA QUERIES
+@media screen and (max-width: 800px) {
+    header {
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.5s ease;
+
+            .menuH-btn {
+                display: flex;
+                width: 2.5em;
+
+                transition: all 0.25s ease-in;
+
+                img {
+                    width: 100%;
+                    filter: drop-shadow(0 0 5px $myWhite);
+                }
+            }
+
+            ul {
+                position: absolute;
+                left: 0;
+                top: -50vh;
+
+                height: 50vh;
+                width: 100%;
+
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 0;
+
+                transition: all 0.5s ease;
+            }
+        }
+    }
 }
