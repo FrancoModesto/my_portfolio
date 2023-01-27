@@ -13,6 +13,17 @@ menuHbtn.addEventListener("click", () => {
     }
 })
 
+//This fixes an issue caused by opening the menuH, closing it, and then resizing to > 800px resolutions (the nav stayed in -50vh).
+window.addEventListener("resize", () => {
+    if (window.screen.width > 800) {
+        nav.style.transform = "translateY(0)"
+        on = false
+    } else {
+        nav.style.transform = "translateY(-50vh)"
+        on = false
+    }
+})
+
 
 //PARALLAX
 const parallax = document.querySelector(".parallax")
