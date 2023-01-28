@@ -103,11 +103,6 @@ header {
 
 //**********************
 //MAIN
-h2 {
-    text-align: center;
-    font-weight: 400;
-}
-
 .inicio {
     position: relative;
     height: 100vh;
@@ -152,8 +147,8 @@ h2 {
             justify-content: center;
 
             .photo {
-                width: 15em;
-                height: 15em;
+                width: 12em;
+                height: 12em;
                 margin-bottom: 1em;
 
                 background-color: $myWhite;
@@ -178,12 +173,14 @@ h2 {
                 font-size: 4rem;
                 line-height: 1;
                 text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
-                margin: 0 1em 0.2em 1em;
+                margin: 0 0.5em 0.2em 0.5em;
 
                 animation: text_flicker 5s infinite forwards;
             }
 
             h2 {
+                text-align: center;
+                font-weight: 400;
                 font-size: 2rem;
                 text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
 
@@ -259,14 +256,21 @@ h2 {
                 width: 2.5em;
                 height: 4em;
 
+                opacity: 0.75;
+                transition: all 0.3s ease;
+
                 img {
                     width: 100%;
                     object-fit: contain;
                     transition: all 0.3s ease;
                 }
 
-                &:hover :first-child {
-                    filter: drop-shadow(0 0 5px $myWhite);
+                &:hover {
+                    opacity: 1;
+
+                    & :first-child {
+                        filter: drop-shadow(0 0 3px $myWhite);
+                    }
                 }
             }
         }
