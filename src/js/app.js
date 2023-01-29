@@ -1,25 +1,25 @@
 //HAMBURGUER MENU
 const menuHbtn = document.querySelector(".menuH-btn")
-const nav = document.querySelector("nav")
+const header = document.querySelector("header")
 
 let on = false
 menuHbtn.addEventListener("click", () => {
     if (on) {
-        nav.style.transform = "translateY(-50vh)"
+        header.style.transform = "translateY(-50vh)"
         on = false
     } else {
-        nav.style.transform = "translateY(0)"
+        header.style.transform = "translateY(0)"
         on = true
     }
 })
 
-//This fixes an issue caused by opening the menuH, closing it, and then resizing to > 800px resolutions (the nav stayed in -50vh).
+//This fixes an issue caused by opening the menuH, closing it, and then resizing to > 800px resolutions (the header stayed in -50vh).
 window.addEventListener("resize", () => {
     if (window.innerWidth > 800) {
-        nav.style.transform = "translateY(0)"
+        header.style.transform = "translateY(0)"
         on = false
     } else {
-        nav.style.transform = "translateY(-50vh)"
+        header.style.transform = "translateY(-50vh)"
         on = false
     }
 })

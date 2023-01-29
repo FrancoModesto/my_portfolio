@@ -22,23 +22,20 @@ body {
 }
 
 header {
-  width: 100%;
   position: fixed;
   z-index: 1;
-}
-
-header nav {
+  width: 100%;
   height: 4em;
   background-color: rgba(31, 0, 51, 0.9);
   border-bottom: 2px solid whitesmoke;
   box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
 }
 
-header nav .menuH-btn {
+header .menuH-btn {
   display: none;
 }
 
-header nav ul {
+header ul {
   height: 100%;
   list-style-type: none;
   display: flex;
@@ -47,7 +44,7 @@ header nav ul {
   gap: 5em;
 }
 
-header nav ul li a {
+header ul li a {
   position: relative;
   text-decoration: none;
   font-weight: 400;
@@ -55,10 +52,11 @@ header nav ul li a {
   line-height: 1;
   color: #bebebe;
   padding: 0 5px 0 5px;
+  padding-top: 0.2em;
   transition: all 0.3s ease;
 }
 
-header nav ul li a:after {
+header ul li a:after {
   content: "";
   position: absolute;
   left: 0;
@@ -69,23 +67,23 @@ header nav ul li a:after {
   transition: all 0.3s ease;
 }
 
-header nav ul li a:hover {
+header ul li a:hover {
   color: whitesmoke;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
 }
 
-header nav ul li a:hover:after {
+header ul li a:hover:after {
   width: 100%;
   box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
 }
 
-.inicio {
+#inicio {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
-.inicio .fix-parallax {
+#inicio .fix-parallax {
   position: absolute;
   left: 0;
   top: 0;
@@ -94,14 +92,14 @@ header nav ul li a:hover:after {
   overflow: hidden;
 }
 
-.inicio .fix-parallax .parallax {
+#inicio .fix-parallax .parallax {
   height: 130vh;
   background-image: url(../../../assets/images/profile/background.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.inicio .fix-profile {
+#inicio .fix-profile {
   position: absolute;
   left: 0;
   top: 0;
@@ -110,7 +108,7 @@ header nav ul li a:hover:after {
   overflow: hidden;
 }
 
-.inicio .fix-profile .profile {
+#inicio .fix-profile .profile {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -118,7 +116,7 @@ header nav ul li a:hover:after {
   justify-content: center;
 }
 
-.inicio .fix-profile .profile .photo {
+#inicio .fix-profile .profile .photo {
   width: 12em;
   height: 12em;
   margin-bottom: 1em;
@@ -130,13 +128,13 @@ header nav ul li a:hover:after {
   animation: flicker 5s infinite forwards;
 }
 
-.inicio .fix-profile .profile .photo img {
+#inicio .fix-profile .profile .photo img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.inicio .fix-profile .profile h1 {
+#inicio .fix-profile .profile h1 {
   text-align: center;
   font-family: "Dancing Script", cursive;
   font-weight: 700;
@@ -147,7 +145,7 @@ header nav ul li a:hover:after {
   animation: text_flicker 5s infinite forwards;
 }
 
-.inicio .fix-profile .profile h2 {
+#inicio .fix-profile .profile h2 {
   text-align: center;
   font-weight: 400;
   font-size: 2rem;
@@ -180,7 +178,7 @@ header nav ul li a:hover:after {
   }
 }
 
-.inicio svg {
+#inicio svg {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -188,13 +186,41 @@ header nav ul li a:hover:after {
   height: 20vh;
 }
 
-.other {
-  width: 100%;
+#skills {
   height: 100vh;
+  padding-top: 6em;
+  display: flex;
+  justify-content: center;
+}
+
+.cv-btn {
+  width: 12em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c1e73;
+  border: 2px solid #bebebe;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #bebebe;
+  padding-top: 0.2em;
+  transition: all 0.5s ease;
+}
+
+.cv-btn:hover {
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: #5528b9;
+  border: 2px solid whitesmoke;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
 }
 
 @media screen and (max-width: 800px) {
-  header nav {
+  header {
     height: calc(50vh + 4em);
     transform: translateY(-50vh);
     display: flex;
@@ -202,31 +228,31 @@ header nav ul li a:hover:after {
     align-items: center;
     transition: all 0.5s ease;
   }
-  header nav ul {
+  header ul {
     width: 100%;
     height: 50vh;
     flex-direction: column;
     justify-content: space-around;
     gap: 0;
   }
-  header nav .menuH-btn {
+  header .menuH-btn {
     display: flex;
     width: 2.75em;
     height: 4em;
     opacity: 0.75;
     transition: all 0.3s ease;
   }
-  header nav .menuH-btn img {
+  header .menuH-btn img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     transition: all 0.3s ease;
   }
-  header nav .menuH-btn:hover {
+  header .menuH-btn:hover {
     cursor: pointer;
     opacity: 1;
   }
-  header nav .menuH-btn:hover :first-child {
+  header .menuH-btn:hover :first-child {
     filter: drop-shadow(0 0 3px whitesmoke);
   }
 }
