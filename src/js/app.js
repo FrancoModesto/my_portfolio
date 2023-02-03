@@ -1,14 +1,17 @@
 //HAMBURGUER MENU
 const menuHbtn = document.querySelector(".menuH-btn")
 const header = document.querySelector("header")
+const ul = document.querySelector("header ul")
 
 let on = false
 menuHbtn.addEventListener("click", () => {
     if (on) {
         header.style.transform = "translateY(-50vh)"
+        ul.style.opacity = "0"
         on = false
     } else {
         header.style.transform = "translateY(0)"
+        ul.style.opacity = "1"
         on = true
     }
 })
@@ -17,9 +20,11 @@ menuHbtn.addEventListener("click", () => {
 window.addEventListener("resize", () => {
     if (window.innerWidth > 800) {
         header.style.transform = "translateY(0)"
+        ul.style.opacity = "1"
         on = false
     } else {
         header.style.transform = "translateY(-50vh)"
+        ul.style.opacity = "0"
         on = false
     }
 })
