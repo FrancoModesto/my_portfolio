@@ -4,7 +4,7 @@ $mySecondFont: "Dancing Script", cursive;
 
 $myWhite: rgb(245, 245, 245);
 $myGrey: rgb(190, 190, 190);
-$myBlack: rgb(31, 31, 31);
+$myBlack: rgb(30, 30, 30);
 
 $myPurple: rgb(85, 40, 185);
 $myObscurePurple: rgb(60, 30, 115);
@@ -113,6 +113,13 @@ h2 {
     font-size: 3.5rem;
     line-height: 1;
     text-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
+}
+
+h3,
+h4 {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
 }
 
 //**********************
@@ -243,7 +250,6 @@ h2 {
     padding-top: 6em;
 
     h3 {
-        text-align: center;
         font-size: 1.5rem;
     }
 }
@@ -260,7 +266,6 @@ h2 {
     background-color: $myObscurePurple;
     border: 2px solid $myGrey;
     border-radius: 50px;
-    box-shadow: 0 0 15px $myBlack;
 
     text-decoration: none;
     font-size: 1rem;
@@ -295,37 +300,68 @@ h2 {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 6em;
+        gap: 5em;
     }
 
     .card {
         position: relative;
 
         width: 18em;
-        height: 22em;
+        height: 18em;
 
-        background-color: $myWhite;
-        border: 2px solid $myWhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-image: url(../../../assets/images/projects/background.jpg);
+        background-position: center;
+        background-size: cover;
+
+        border: 3px solid $myWhite;
+        border-radius: 100%;
         box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
-
-        border-radius: 10px;
-        overflow: hidden;
 
         transition: all 0.5s ease;
 
         &:hover {
+            box-shadow: none;
+
             & .cover {
+                opacity: 1;
+
                 &.top {
                     transform: translateY(100%);
-                    opacity: 1;
                 }
 
                 &.bottom {
                     transform: translateY(-100%);
-                    opacity: 1;
                 }
             }
+
+            & .project-logo {
+                transform: scale(0.8) translateY(-120%) rotate(360deg);
+
+                border: 5px solid $myPurple;
+                box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
+            }
         }
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 100%;
+        overflow: hidden;
+
         .cover {
             position: absolute;
             top: 0;
@@ -335,34 +371,108 @@ h2 {
             height: 50%;
 
             background-color: rgba(30, 0, 50, 0.8);
-
             opacity: 0;
-            transition: all 0.5s ease;
+
+            transition: all 0.3s ease-out;
+
+            &.top {
+                top: -50%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 0.25em;
+
+                padding-bottom: 0.5em;
+
+                h3 {
+                    font-size: 1.3rem;
+                }
+
+                h4 {
+                    font-size: 1rem;
+                    color: $myGrey;
+                }
+            }
+
+            &.bottom {
+                top: 100%;
+
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 1em;
+
+                padding-top: 1em;
+
+                a {
+                    width: 3em;
+                    height: 3em;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-color: $myObscurePurple;
+                    border: 2px solid $myGrey;
+                    border-radius: 100%;
+
+                    transition: all 0.3s ease;
+
+                    .icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &.git {
+                            width: 65%;
+                            height: 65%;
+                        }
+
+                        &.web {
+                            width: 50%;
+                            height: 50%;
+                        }
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $myPurple;
+                        border: 2px solid $myWhite;
+                        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
+
+                        .icon img {
+                            filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg)
+                                brightness(115%) contrast(92%);
+                        }
+                    }
+                }
+            }
         }
+    }
 
-        .top {
-            top: -50%;
-        }
+    .project-logo {
+        width: 8em;
+        height: 8em;
+        overflow: hidden;
 
-        .bottom {
-            top: 100%;
-        }
+        background-color: $myWhite;
+        border-radius: 100%;
+        border: 5px solid $myWhite;
+        box-shadow: 0 0 50px $myDarkPurple;
 
-        .content {
-            position: absolute;
-            top: 0;
-            left: 0;
+        transition: all 0.5s ease;
 
+        img {
             width: 100%;
             height: 100%;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-
-                transition: all 0.5s ease;
-            }
+            object-fit: contain;
         }
     }
 }
@@ -404,22 +514,21 @@ h2 {
             width: 2.75em;
             height: 4em;
 
-            opacity: 0.75;
             transition: all 0.3s ease;
 
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
+
                 transition: all 0.3s ease;
             }
 
             &:hover {
                 cursor: pointer;
-                opacity: 1;
 
-                & :first-child {
-                    filter: drop-shadow(0 0 3px $myWhite);
+                & img {
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg)
+                        brightness(115%) contrast(92%) drop-shadow(0 0 3px $myWhite);
                 }
             }
         }
