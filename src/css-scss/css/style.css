@@ -267,7 +267,7 @@ h4 {
 }
 
 #proyectos .card:hover {
-  box-shadow: none;
+  box-shadow: 0 0 5px whitesmoke;
 }
 
 #proyectos .card:hover .cover {
