@@ -47,7 +47,7 @@ header {
 
     background-color: rgba(30, 0, 50, 0.9);
     border-bottom: 2px solid $myWhite;
-    box-shadow: 0 0 5px $myWhite;
+    box-shadow: 0 0 3px $myWhite, 0 0 5px $myWhite;
 
     .menuH-btn {
         display: none;
@@ -93,12 +93,12 @@ header {
 
                 &:hover {
                     color: $myWhite;
-                    text-shadow: 0 0 5px $myWhite;
+                    text-shadow: 0 0 3px $myWhite, 0 0 5px $myWhite;
                 }
 
                 &:hover:after {
                     width: 100%;
-                    box-shadow: 0 0 5px $myWhite;
+                    box-shadow: 0 0 3px $myWhite, 0 0 5px $myWhite;
                 }
             }
         }
@@ -330,7 +330,7 @@ h4 {
         transition: all 0.5s ease;
 
         &:hover {
-            box-shadow: 0 0 5px $myWhite;
+            box-shadow: 0 0 3px $myWhite, 0 0 5px $myWhite;
 
             & .cover {
                 opacity: 1;
@@ -514,15 +514,13 @@ h4 {
             gap: 0;
 
             opacity: 0;
-            transition: all 0.5s ease;
+            transition: all 1s ease;
         }
 
         .menuH-btn {
             display: flex;
             width: 2.75em;
             height: 4em;
-
-            transition: all 0.3s ease;
 
             img {
                 width: 100%;
@@ -536,7 +534,7 @@ h4 {
 
                 & img {
                     filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg)
-                        brightness(115%) contrast(92%) drop-shadow(0 0 2px $myWhite);
+                        brightness(115%) contrast(92%) drop-shadow(0 0 3px $myWhite);
                 }
             }
         }

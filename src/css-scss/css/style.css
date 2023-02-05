@@ -28,7 +28,7 @@ header {
   height: 4em;
   background-color: rgba(30, 0, 50, 0.9);
   border-bottom: 2px solid whitesmoke;
-  box-shadow: 0 0 5px whitesmoke;
+  box-shadow: 0 0 3px whitesmoke, 0 0 5px whitesmoke;
 }
 
 header .menuH-btn {
@@ -70,12 +70,12 @@ header ul li a:after {
 
 header ul li a:hover {
   color: whitesmoke;
-  text-shadow: 0 0 5px whitesmoke;
+  text-shadow: 0 0 3px whitesmoke, 0 0 5px whitesmoke;
 }
 
 header ul li a:hover:after {
   width: 100%;
-  box-shadow: 0 0 5px whitesmoke;
+  box-shadow: 0 0 3px whitesmoke, 0 0 5px whitesmoke;
 }
 
 h2 {
@@ -272,7 +272,7 @@ h4 {
 }
 
 #proyectos .card:hover {
-  box-shadow: 0 0 5px whitesmoke;
+  box-shadow: 0 0 3px whitesmoke, 0 0 5px whitesmoke;
 }
 
 #proyectos .card:hover .cover {
@@ -429,13 +429,12 @@ h4 {
     justify-content: space-around;
     gap: 0;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
   }
   header .menuH-btn {
     display: flex;
     width: 2.75em;
     height: 4em;
-    transition: all 0.3s ease;
   }
   header .menuH-btn img {
     width: 100%;
@@ -446,6 +445,6 @@ h4 {
     cursor: pointer;
   }
   header .menuH-btn:hover img {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg) brightness(115%) contrast(92%) drop-shadow(0 0 2px whitesmoke);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg) brightness(115%) contrast(92%) drop-shadow(0 0 3px whitesmoke);
   }
 }
