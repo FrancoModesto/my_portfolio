@@ -28,7 +28,7 @@ header {
   height: 4em;
   background-color: rgba(30, 0, 50, 0.9);
   border-bottom: 2px solid whitesmoke;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
+  box-shadow: 0 0 5px whitesmoke;
 }
 
 header .menuH-btn {
@@ -42,6 +42,7 @@ header ul {
   align-items: center;
   justify-content: center;
   gap: 5em;
+  will-change: opacity;
 }
 
 header ul li a {
@@ -69,12 +70,12 @@ header ul li a:after {
 
 header ul li a:hover {
   color: whitesmoke;
-  text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
+  text-shadow: 0 0 5px whitesmoke;
 }
 
 header ul li a:hover:after {
   width: 100%;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
+  box-shadow: 0 0 5px whitesmoke;
 }
 
 h2 {
@@ -139,8 +140,9 @@ h4 {
   background-color: whitesmoke;
   border: 5px solid whitesmoke;
   border-radius: 100%;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke, 0 0 50px whitesmoke;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
   overflow: hidden;
+  will-change: box-shadow;
   animation: flicker 5s infinite forwards;
 }
 
@@ -158,6 +160,7 @@ h4 {
   line-height: 1;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
   margin: 0 0.5em 0.2em 0.5em;
+  will-change: text-shadow;
   animation: text_flicker 5s infinite forwards;
 }
 
@@ -165,6 +168,7 @@ h4 {
   margin-bottom: 0;
   font-size: 2rem;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
+  will-change: text-shadow;
   animation: text_flicker 5s infinite forwards;
 }
 
@@ -177,7 +181,7 @@ h4 {
   100% {
     background-color: whitesmoke;
     border: 5px solid whitesmoke;
-    box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke, 0 0 50px whitesmoke;
+    box-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
   }
 }
 
@@ -232,7 +236,7 @@ h4 {
   color: whitesmoke;
   background-color: #5528b9;
   border: 2px solid whitesmoke;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9, 0 0 50px #5528b9;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
 }
 
 #proyectos {
@@ -262,7 +266,8 @@ h4 {
   background-size: cover;
   border: 3px solid whitesmoke;
   border-radius: 100%;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9, 0 0 50px #5528b9;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
+  will-change: box-shadow;
   transition: all 0.5s ease;
 }
 
@@ -275,17 +280,17 @@ h4 {
 }
 
 #proyectos .card:hover .cover.top {
-  transform: translate3d(0, 100%, 0);
+  transform: translateY(100%);
 }
 
 #proyectos .card:hover .cover.bottom {
-  transform: translate3d(0, -100%, 0);
+  transform: translateY(-100%);
 }
 
 #proyectos .card:hover .project-logo {
-  transform: scale3d(0.8, 0.8, 0.8) translate3d(0, -120%, 0) rotate3d(0, 0, 1, 360deg);
+  transform: scale3d(0.8, 0.8, 0.8) translateY(-120%) rotate(360deg);
   border: 5px solid #5528b9;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9, 0 0 50px #5528b9;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
 }
 
 #proyectos .content {
@@ -309,6 +314,7 @@ h4 {
   height: 50%;
   background-color: rgba(30, 0, 50, 0.8);
   opacity: 0;
+  will-change: opacity;
   transition: all 0.3s ease-out;
 }
 
@@ -377,7 +383,7 @@ h4 {
   cursor: pointer;
   background-color: #5528b9;
   border: 2px solid whitesmoke;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9;
 }
 
 #proyectos .content .cover.bottom a:hover .icon img {
@@ -392,6 +398,7 @@ h4 {
   border-radius: 100%;
   border: 5px solid whitesmoke;
   box-shadow: 0 0 50px #1e0032;
+  will-change: transform, box-shadow;
   transition: all 0.5s ease;
 }
 
@@ -403,13 +410,13 @@ h4 {
 
 #contacto {
   padding-top: 6em;
-  height: 100vh;
+  margin-top: 4em;
 }
 
 @media screen and (max-width: 800px) {
   header {
     height: calc(50vh + 4em);
-    transform: translate3d(0, -50vh, 0);
+    transform: translateY(-50vh);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -439,6 +446,6 @@ h4 {
     cursor: pointer;
   }
   header .menuH-btn:hover img {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg) brightness(115%) contrast(92%) drop-shadow(0 0 3px whitesmoke);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg) brightness(115%) contrast(92%) drop-shadow(0 0 2px whitesmoke);
   }
 }

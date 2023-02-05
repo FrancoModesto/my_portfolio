@@ -47,7 +47,7 @@ header {
 
     background-color: rgba(30, 0, 50, 0.9);
     border-bottom: 2px solid $myWhite;
-    box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite;
+    box-shadow: 0 0 5px $myWhite;
 
     .menuH-btn {
         display: none;
@@ -61,6 +61,8 @@ header {
         align-items: center;
         justify-content: center;
         gap: 5em;
+
+        will-change: opacity;
 
         li {
             a {
@@ -91,12 +93,12 @@ header {
 
                 &:hover {
                     color: $myWhite;
-                    text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite;
+                    text-shadow: 0 0 5px $myWhite;
                 }
 
                 &:hover:after {
                     width: 100%;
-                    box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite;
+                    box-shadow: 0 0 5px $myWhite;
                 }
             }
         }
@@ -175,9 +177,10 @@ h4 {
                 background-color: $myWhite;
                 border: 5px solid $myWhite;
                 border-radius: 100%;
-                box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite, 0 0 50px $myWhite;
+                box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
 
                 overflow: hidden;
+                will-change: box-shadow;
                 animation: flicker 5s infinite forwards;
 
                 img {
@@ -196,6 +199,7 @@ h4 {
                 text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
                 margin: 0 0.5em 0.2em 0.5em;
 
+                will-change: text-shadow;
                 animation: text_flicker 5s infinite forwards;
             }
 
@@ -205,6 +209,7 @@ h4 {
                 font-size: 2rem;
                 text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
 
+                will-change: text-shadow;
                 animation: text_flicker 5s infinite forwards;
             }
 
@@ -217,7 +222,7 @@ h4 {
                 100% {
                     background-color: $myWhite;
                     border: 5px solid $myWhite;
-                    box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite, 0 0 50px $myWhite;
+                    box-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
                 }
             }
 
@@ -282,7 +287,7 @@ h4 {
         color: $myWhite;
         background-color: $myPurple;
         border: 2px solid $myWhite;
-        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
+        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
     }
 }
 
@@ -319,8 +324,9 @@ h4 {
 
         border: 3px solid $myWhite;
         border-radius: 100%;
-        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
+        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
 
+        will-change: box-shadow;
         transition: all 0.5s ease;
 
         &:hover {
@@ -330,19 +336,19 @@ h4 {
                 opacity: 1;
 
                 &.top {
-                    transform: translate3d(0, 100%, 0);
+                    transform: translateY(100%);
                 }
 
                 &.bottom {
-                    transform: translate3d(0, -100%, 0);
+                    transform: translateY(-100%);
                 }
             }
 
             & .project-logo {
-                transform: scale3d(0.8, 0.8, 0.8) translate3d(0, -120%, 0) rotate3d(0, 0, 1, 360deg);
+                transform: scale3d(0.8, 0.8, 0.8) translateY(-120%) rotate(360deg);
 
                 border: 5px solid $myPurple;
-                box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
+                box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
             }
         }
     }
@@ -373,6 +379,7 @@ h4 {
             background-color: rgba(30, 0, 50, 0.8);
             opacity: 0;
 
+            will-change: opacity;
             transition: all 0.3s ease-out;
 
             &.top {
@@ -445,7 +452,7 @@ h4 {
                         cursor: pointer;
                         background-color: $myPurple;
                         border: 2px solid $myWhite;
-                        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
+                        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple;
 
                         .icon img {
                             filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg)
@@ -467,6 +474,7 @@ h4 {
         border: 5px solid $myWhite;
         box-shadow: 0 0 50px $myDarkPurple;
 
+        will-change: transform, box-shadow;
         transition: all 0.5s ease;
 
         img {
@@ -481,7 +489,7 @@ h4 {
 //CONTACTO
 #contacto {
     padding-top: 6em;
-    height: 100vh;
+    margin-top: 4em;
 }
 
 //**********************
@@ -489,7 +497,7 @@ h4 {
 @media screen and (max-width: 800px) {
     header {
         height: calc(50vh + 4em);
-        transform: translate3d(0, -50vh, 0);
+        transform: translateY(-50vh);
 
         display: flex;
         flex-direction: column;
@@ -528,7 +536,7 @@ h4 {
 
                 & img {
                     filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(1%) hue-rotate(179deg)
-                        brightness(115%) contrast(92%) drop-shadow(0 0 3px $myWhite);
+                        brightness(115%) contrast(92%) drop-shadow(0 0 2px $myWhite);
                 }
             }
         }
