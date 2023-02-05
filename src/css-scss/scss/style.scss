@@ -330,16 +330,16 @@ h4 {
                 opacity: 1;
 
                 &.top {
-                    transform: translateY(100%);
+                    transform: translate3d(0, 100%, 0);
                 }
 
                 &.bottom {
-                    transform: translateY(-100%);
+                    transform: translate3d(0, -100%, 0);
                 }
             }
 
             & .project-logo {
-                transform: scale(0.8) translateY(-120%) rotate(360deg);
+                transform: scale3d(0.8, 0.8, 0.8) translate3d(0, -120%, 0) rotate3d(0, 0, 1, 360deg);
 
                 border: 5px solid $myPurple;
                 box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
@@ -489,7 +489,7 @@ h4 {
 @media screen and (max-width: 800px) {
     header {
         height: calc(50vh + 4em);
-        transform: translateY(-50vh);
+        transform: translate3d(0, -50vh, 0);
 
         display: flex;
         flex-direction: column;
