@@ -490,6 +490,9 @@ h4 {
   .contacto .redes .red a {
     font-size: 1.2rem;
   }
+  .contacto .redes .red:hover {
+    transform: scale(1.05);
+  }
 }
 
 @media screen and (max-width: 800px) {
