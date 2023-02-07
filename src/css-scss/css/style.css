@@ -312,6 +312,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 50%;
+  border: none;
   background-color: rgba(30, 0, 50, 0.8);
   opacity: 0;
   will-change: opacity;
