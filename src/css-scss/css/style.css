@@ -236,7 +236,59 @@ h4 {
   color: whitesmoke;
   background-color: #5528b9;
   border: 2px solid whitesmoke;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9, 0 0 50px #5528b9;
+}
+
+.skillsMixer {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.skillsMixer .dragparent-skills,
+.skillsMixer .dragparent-mixer {
+  width: 45%;
+  height: 30em;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5em;
+  padding: 2em;
+  background-color: #5528b9;
+  border-radius: 10px;
+  border: 5px solid whitesmoke;
   box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
+}
+
+.skillsMixer .dragparent-mixer {
+  background-color: #3c1e73;
+}
+
+.draggable {
+  width: 6em;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.2em;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1;
+  font-size: 1.4rem;
+  background-color: #1e0032;
+  border-radius: 100%;
+  border: 3px solid whitesmoke;
+  box-shadow: 0 0 30px #1e0032;
+  transition: all 0.5s ease;
+}
+
+.draggable:hover {
+  cursor: grab;
+  background-color: #4b325a;
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #4b325a, 0 0 30px #4b325a;
 }
 
 #proyectos {
@@ -425,11 +477,11 @@ h4 {
 
 .contacto {
   padding: 2em 0 6em 0;
-  background-color: #3c1e73;
+  background-color: #5528b9;
 }
 
 .contacto h2 {
-  text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
+  text-shadow: 0 0 5px whitesmoke;
 }
 
 .contacto .redes {

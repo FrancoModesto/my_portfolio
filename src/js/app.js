@@ -41,3 +41,7 @@ function scrollParallax() {
 }
 
 window.addEventListener("scroll", scrollParallax)
+
+
+//SKILLS - DRAG AND DROP
+dragula([document.querySelector(".dragparent-skills"), document.querySelector(".dragparent-mixer")])

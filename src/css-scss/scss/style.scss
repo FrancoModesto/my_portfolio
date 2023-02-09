@@ -286,7 +286,67 @@ h4 {
         color: $myWhite;
         background-color: $myPurple;
         border: 2px solid $myWhite;
+        box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
+    }
+}
+
+.skillsMixer {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-around;
+
+    .dragparent-skills,
+    .dragparent-mixer {
+        width: 45%;
+        height: 30em;
+        overflow-y: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1.5em;
+
+        padding: 2em;
+        background-color: $myPurple;
+        border-radius: 10px;
+        border: 5px solid $myWhite;
         box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
+    }
+
+    .dragparent-mixer {
+        background-color: $myObscurePurple;
+    }
+}
+
+//This is out of any other container because otherwise there's a bug.
+.draggable {
+    width: 6em;
+    height: 6em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 0.2em; //Font-fix.
+    text-align: center;
+    font-weight: 300;
+    line-height: 1;
+    font-size: 1.4rem;
+
+    background-color: $myDarkPurple;
+    border-radius: 100%;
+    border: 3px solid $myWhite;
+    box-shadow: 0 0 30px $myDarkPurple;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+        cursor: grab;
+        background-color: $myLightPurple;
+        box-shadow: 0 0 5px $myWhite, 0 0 15px $myLightPurple, 0 0 30px $myLightPurple;
     }
 }
 
@@ -503,10 +563,10 @@ h4 {
 
 .contacto {
     padding: 2em 0 6em 0;
-    background-color: $myObscurePurple;
+    background-color: $myPurple;
 
     h2 {
-        text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite;
+        text-shadow: 0 0 5px $myWhite;
     }
 
     .redes {
