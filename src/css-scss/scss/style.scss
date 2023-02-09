@@ -315,10 +315,6 @@ h4 {
         border: 5px solid $myWhite;
         box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
     }
-
-    .dragparent-mixer {
-        background-color: $myObscurePurple;
-    }
 }
 
 //This is out of any other container because otherwise there's a bug.
@@ -563,7 +559,7 @@ h4 {
 
 .contacto {
     padding: 2em 0 6em 0;
-    background-color: $myPurple;
+    background-color: $myObscurePurple;
 
     h2 {
         text-shadow: 0 0 5px $myWhite;

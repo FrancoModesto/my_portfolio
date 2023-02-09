@@ -263,10 +263,6 @@ h4 {
   box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
 }
 
-.skillsMixer .dragparent-mixer {
-  background-color: #3c1e73;
-}
-
 .draggable {
   width: 6em;
   height: 6em;
@@ -477,7 +473,7 @@ h4 {
 
 .contacto {
   padding: 2em 0 6em 0;
-  background-color: #5528b9;
+  background-color: #3c1e73;
 }
 
 .contacto h2 {
