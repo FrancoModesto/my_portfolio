@@ -44,4 +44,46 @@ window.addEventListener("scroll", scrollParallax)
 
 
 //SKILLS - DRAG AND DROP
-dragula([document.querySelector(".dragparent-skills"), document.querySelector(".dragparent-mixer")])
+const dragparentSkills = document.querySelector(".dragparent-skills")
+const dragparentMixer = document.querySelector('.dragparent-mixer');
+const dragulaContainers = [dragparentSkills, dragparentMixer]
+const initialMixerChildren = dragparentMixer.children.length
+
+const mixerPlaceholder = document.querySelector('.mixer-placeholder');
+const mixerBtn = document.querySelector('.mixer-btn');
+
+//Esto anula el bug de scroll de dragula en celulares.
+dragulaContainers.forEach(container => {
+    container.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+    }, { passive: false });
+});
+
+let drake = null
+function startDragula() {
+    drake = dragula(dragulaContainers, {
+        invalid: (el) => {
+            return el.className === "mixer-placeholder" || el.className === "mixer-cover"
+        }
+    }).on("dragend", () => {
+        mixerPlaceholder.style.display = dragparentMixer.children.length === initialMixerChildren ? "flex" : "none";
+        dragparentMixer.children.length > initialMixerChildren ? mixerBtn.classList.add("canMix") : mixerBtn.classList.remove("canMix")
+    })
+}
+
+function stopDragula() {
+    drake.destroy()
+}
+
+startDragula()
+
+
+//SKILLS - MIXER
+const mixerCover = document.querySelector('.mixer-cover');
+
+mixerBtn.addEventListener("click", () => {
+    if (dragparentMixer.children.length > initialMixerChildren) {
+        stopDragula()
+        mixerCover.style.transform = "translateY(100%)"
+    }
+})
