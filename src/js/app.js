@@ -45,30 +45,41 @@ window.addEventListener('scroll', scrollParallax)
 
 //SKILLS - DRAG AND DROP
 const dragparentSkills = document.querySelector('.dragparent-skills')
-const dragparentMixer = document.querySelector('.dragparent-mixer');
+const dragparentMixer = document.querySelector('.dragparent-mixer')
 const dragulaContainers = [dragparentSkills, dragparentMixer]
 const initialMixerChildren = dragparentMixer.children.length
 
-const draggables = document.querySelectorAll('.draggable');
+const draggables = document.querySelectorAll('.draggable')
 
-const mixerPlaceholder = document.querySelector('.mixer-placeholder');
-const mixerBtn = document.querySelector('.mixer-btn');
+const mixerPlaceholder = document.querySelector('.mixer-placeholder')
+const mixerBtn = document.querySelector('.mixer-btn')
 
-//Esto anula el bug de scroll de dragula en celulares.
+//This fixes the dragula mobile scroll bug.
 draggables.forEach(container => {
     container.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-    }, { passive: false });
-});
+        e.preventDefault()
+    }, { passive: false })
+})
 
 let drake = null
 function startDragula() {
     drake = dragula(dragulaContainers, {
         invalid: (el) => {
-            return el.className === 'mixer-placeholder' || el.className === 'mixer-cover'
+            return el.className === 'mixer-placeholder' || el.className === 'mixer-cover' || el.className === 'mixer-result'
         }
     }).on('dragend', () => {
-        mixerPlaceholder.style.display = dragparentMixer.children.length === initialMixerChildren ? 'flex' : 'none';
+        if (dragparentMixer.children.length === initialMixerChildren) {
+            mixerPlaceholder.style.display = 'flex'
+            setTimeout(() => {
+                mixerPlaceholder.style.opacity = 1
+            }, 100) //This fixes a bug that made the text appear abruptly.
+        } else {
+            mixerPlaceholder.style.opacity = 0
+            setTimeout(() => {
+                mixerPlaceholder.style.display = 'none'
+            }, 300) //This number is the transition duration on CSS.
+        }
+
         dragparentMixer.children.length > initialMixerChildren ? mixerBtn.classList.add('canMix') : mixerBtn.classList.remove('canMix')
     })
 }
@@ -81,11 +92,23 @@ startDragula()
 
 
 //SKILLS - MIXER
-const mixerCover = document.querySelector('.mixer-cover');
+const mixerCover = document.querySelector('.mixer-cover')
+const mixerResult = document.querySelector('.mixer-result')
+
+function handleFound() {
+    mixerCover.innerHTML = `<h3>COINCIDENCIA ENCONTRADA!</h3>`
+}
+
+function showResult() {
+    mixerResult.style.transform = 'translateY(100%)'
+}
 
 mixerBtn.addEventListener('click', () => {
     if (dragparentMixer.children.length > initialMixerChildren) {
         stopDragula()
         mixerCover.style.transform = 'translateY(100%)'
+        mixerBtn.classList.remove('canMix')
+        setTimeout(handleFound, 3000)
+        setTimeout(showResult, 5000)
     }
 })
