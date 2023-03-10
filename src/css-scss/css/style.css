@@ -219,33 +219,6 @@ p {
   padding-top: 6em;
 }
 
-.cv-btn {
-  width: 12em;
-  height: 3em;
-  margin: 0 auto 6em auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #3c1e73;
-  border: 2px solid #bebebe;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
-  color: #bebebe;
-  padding-top: 0.2em;
-  transition: all 0.5s ease;
-}
-
-.cv-btn:hover {
-  cursor: pointer;
-  color: whitesmoke;
-  background-color: #5528b9;
-  border: 2px solid whitesmoke;
-  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9, 0 0 50px #5528b9;
-}
-
 .skillsMixer {
   width: 90%;
   margin: auto;
@@ -254,43 +227,50 @@ p {
   justify-content: space-around;
 }
 
-.skillsMixer .dragparent-skills,
-.skillsMixer .dragparent-mixer {
+.skillsMixer ::-webkit-scrollbar {
+  display: none;
+}
+
+.skillsMixer .dragparent {
+  position: relative;
   width: 45%;
   height: 30em;
-  overflow-y: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1.5em;
-  padding: 2em;
+  overflow: hidden;
   background-color: #5528b9;
   border-radius: 50px;
   border: 5px solid whitesmoke;
   box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
 }
 
+.skillsMixer .dragparent-skills,
 .skillsMixer .dragparent-mixer {
-  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5em;
 }
 
 .draggable {
-  width: 6em;
-  height: 6em;
+  width: 8em;
+  height: 8em;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 0.2em;
-  text-align: center;
-  font-weight: 300;
-  line-height: 1;
-  font-size: 1.4rem;
   background-color: #1e0032;
   border-radius: 100%;
   border: 3px solid whitesmoke;
   box-shadow: 0 0 30px #1e0032;
   transition: all 0.5s ease;
+}
+
+.draggable i {
+  font-size: 5rem;
+  color: whitesmoke;
 }
 
 .draggable:hover {
@@ -428,6 +408,30 @@ p {
 }
 
 .canMix:hover {
+  box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
+}
+
+.cv-btn {
+  width: 12em;
+  height: 3em;
+  margin: 3em auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5528b9;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  color: whitesmoke;
+  padding-top: 0.2em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.cv-btn:hover {
   box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
 }
 
@@ -725,8 +729,7 @@ p {
     flex-direction: column;
     gap: 3em;
   }
-  .skillsMixer .dragparent-skills,
-  .skillsMixer .dragparent-mixer {
+  .skillsMixer .dragparent {
     width: 100%;
   }
 }
