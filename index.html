@@ -10,6 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bevacqua/dragula@3.7.3/dist/dragula.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./src/css-scss/css/style.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +39,7 @@
                 <div class="parallax"></div>
             </div>
             <div class="fix-profile">
-                <div class="profile">
+                <div class="profile animate__animated animate__fadeInUp">
                     <div class="photo">
                         <img src="./assets/images/profile/profile.jpg" alt="Foto de Perfil - Franco Modesto">
                     </div>
@@ -53,9 +54,9 @@
             </svg>
         </section>
         <section id="skills">
-            <h2>Skills</h2>
+            <h2 class="wow animate__animated animate__fadeInDown">Skills</h2>
             <div class="skillsMixer">
-                <div class="dragparent">
+                <div class="dragparent wow animate__animated animate__fadeInUp">
                     <div class="dragparent-skills">
                         <div class="draggable">
                             <i class="devicon-html5-plain-wordmark"></i>
@@ -95,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="dragparent">
+                <div class="dragparent wow animate__animated animate__fadeInUp">
                     <div class="dragparent-mixer">
                         <div class="mixer-placeholder">
                             <h4>DROPEA AQUÍ LAS SKILLS QUE QUIERAS MEZCLAR</h4>
@@ -115,15 +116,15 @@
                     </div>
                 </div>
             </div>
-            <div class="mixer-btn">MEZCLAR</div>
-            <a class="cv-btn" target="_blank"
+            <div class="mixer-btn wow animate__animated animate__fadeInUp">MEZCLAR</div>
+            <a class="cv-btn wow animate__animated animate__fadeInUp" target="_blank"
                 href="https://drive.google.com/file/d/1v-KDVvAlIUfHMJw0Avq8bu_xQ_P848qD/view?usp=sharing">VER
                 CURRICULUM</a>
         </section>
         <section id="proyectos">
-            <h2>Proyectos</h2>
+            <h2 class="wow animate__animated animate__fadeInDown">Proyectos</h2>
             <div class="cards">
-                <div class="card">
+                <div class="card wow animate__animated animate__fadeInUp">
                     <div class="content">
                         <div class="cover top">
                             <h4>E-Commerce</h4>
@@ -147,7 +148,7 @@
                         <img src="./assets/images/projects/verduleria-lolita.png" alt="Verdulería Lolita">
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__fadeInUp">
                     <div class="content">
                         <div class="cover top">
                             <h4>Sitio Web</h4>
@@ -171,7 +172,7 @@
                         <img src="./assets/images/projects/keops360.png" alt="Keops360">
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__fadeInUp">
                     <div class="content">
                         <div class="cover top">
                             <h4>Sitio Web</h4>
@@ -195,7 +196,7 @@
                         <img src="./assets/images/projects/cerrajeria-goyena.png" alt="Cerrajería Goyena">
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__fadeInUp">
                     <div class="content">
                         <div class="cover top">
                             <h4>Videojuego</h4>
@@ -220,7 +221,7 @@
                         <img src="./assets/images/projects/glow-project.png" alt="Glow Project">
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__fadeInUp">
                     <div class="content">
                         <div class="cover top">
                             <h4>Aplicación</h4>
@@ -255,31 +256,36 @@
             </svg>
         </div>
         <section class="contacto">
-            <h2>Contacto</h2>
+            <h2 class="wow animate__animated animate__fadeInDown">Contacto</h2>
             <div class="redes">
-                <div class="red">
+                <div class="red wow animate__animated animate__fadeInUp">
                     <img src="./assets/images/other/svg/whatsapp-logo.svg" alt="Logo WhatsApp">
                     <a target="_blank" href="https://wa.me/5491132735297">+54 11 3273-5297</a>
                 </div>
-                <div class="red">
+                <div class="red wow animate__animated animate__fadeInUp">
                     <img src="./assets/images/other/svg/instagram-logo.svg" alt="Logo Instagram">
                     <a target="_blank" href="https://www.instagram.com/franco.modesto">@franco.modesto</a>
                 </div>
-                <div class="red">
+                <div class="red wow animate__animated animate__fadeInUp">
                     <img src="./assets/images/other/svg/linkedin-logo.svg" alt="Logo LinkedIn">
                     <a target="_blank" href="https://www.linkedin.com/in/franco-modesto-47b2601a8">Franco Modesto</a>
                 </div>
-                <div class="red">
+                <div class="red wow animate__animated animate__fadeInUp">
                     <img src="./assets/images/other/svg/github-icon.svg" alt="Logo GitHub">
                     <a target="_blank" href="https://github.com/FrancoModesto">github.com/FrancoModesto</a>
                 </div>
-                <div class="red">
+                <div class="red wow animate__animated animate__fadeInUp">
                     <img src="./assets/images/other/svg/email-logo.svg" alt="Logo Email">
                     <a target="_blank" href="mailto:franco.modesto@hotmail.com">franco.modesto@hotmail.com</a>
                 </div>
             </div>
         </section>
     </main>
+    <!-- WOW JS -->
+    <script src="./src/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
