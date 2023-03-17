@@ -285,6 +285,10 @@ p {
         overflow: hidden;
 
         background-color: $myPurple;
+        background-image: url(../../../assets/images/skills/background.jpg);
+        background-position: center;
+        background-size: cover;
+
         border-radius: 50px;
         border: 5px solid $myWhite;
         box-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple;
@@ -542,6 +546,7 @@ p {
         align-items: center;
         justify-content: center;
 
+        background-color: $myPurple;
         background-image: url(../../../assets/images/projects/background.jpg);
         background-position: center;
         background-size: cover;

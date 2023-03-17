@@ -237,6 +237,9 @@ p {
   height: 32em;
   overflow: hidden;
   background-color: #5528b9;
+  background-image: url(../../../assets/images/skills/background.jpg);
+  background-position: center;
+  background-size: cover;
   border-radius: 50px;
   border: 5px solid whitesmoke;
   box-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9;
@@ -458,6 +461,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #5528b9;
   background-image: url(../../../assets/images/projects/background.jpg);
   background-position: center;
   background-size: cover;
