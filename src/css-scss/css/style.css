@@ -5,11 +5,9 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
-
-::selection {
-  background-color: #4b325a;
-  color: whitesmoke;
+  line-height: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
 }
 
 body {
@@ -17,8 +15,13 @@ body {
   background-color: #1e0032;
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
-  color: whitesmoke;
   font-weight: 300;
+  color: whitesmoke;
+}
+
+::selection {
+  background-color: #4b325a;
+  color: whitesmoke;
 }
 
 header {
@@ -50,7 +53,6 @@ header ul li a {
   text-decoration: none;
   font-weight: 400;
   font-size: 1.25rem;
-  line-height: 1;
   color: #bebebe;
   padding: 0 5px 0 5px;
   padding-top: 0.2em;
@@ -88,7 +90,6 @@ h2 {
   text-align: center;
   font-weight: 400;
   font-size: 3.5rem;
-  line-height: 1;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px #5528b9, 0 0 30px #5528b9, 0 0 50px #5528b9;
 }
 
@@ -98,7 +99,6 @@ h5 {
   cursor: default;
   text-align: center;
   font-weight: 400;
-  line-height: 1;
 }
 
 p {
@@ -168,7 +168,6 @@ p {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
   font-size: 4rem;
-  line-height: 1;
   text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke;
   margin: 0 0.5em 0.2em 0.5em;
   will-change: text-shadow;
@@ -396,7 +395,6 @@ p {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1;
   color: #bebebe;
   padding-top: 0.2em;
   cursor: not-allowed;
@@ -427,7 +425,6 @@ p {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1;
   color: whitesmoke;
   padding-top: 0.2em;
   cursor: pointer;
@@ -657,8 +654,6 @@ p {
   padding-top: 0.2em;
   text-decoration: none;
   font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1;
   color: #bebebe;
   transition: all 0.3s ease;
 }

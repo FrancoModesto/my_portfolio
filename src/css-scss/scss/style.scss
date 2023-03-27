@@ -19,20 +19,25 @@ $myLightPurple: rgb(75, 50, 90);
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
 
-::selection {
-    background-color: $myLightPurple;
-    color: $myWhite;
+    line-height: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
 }
 
 body {
     overflow-x: hidden;
     background-color: $myDarkPurple;
+
     font-size: 16px;
     font-family: $myFont;
-    color: $myWhite;
     font-weight: 300;
+    color: $myWhite;
+}
+
+::selection {
+    background-color: $myLightPurple;
+    color: $myWhite;
 }
 
 //**********************
@@ -70,7 +75,6 @@ header {
                 text-decoration: none;
                 font-weight: 400;
                 font-size: 1.25rem;
-                line-height: 1;
                 color: $myGrey;
                 padding: 0 5px 0 5px;
                 padding-top: 0.2em; //Font-fix.
@@ -117,7 +121,6 @@ h2 {
     text-align: center;
     font-weight: 400;
     font-size: 3.5rem;
-    line-height: 1;
     text-shadow: 0 0 5px $myWhite, 0 0 15px $myPurple, 0 0 30px $myPurple, 0 0 50px $myPurple;
 }
 
@@ -127,7 +130,6 @@ h5 {
     cursor: default;
     text-align: center;
     font-weight: 400;
-    line-height: 1;
 }
 
 p {
@@ -205,7 +207,6 @@ p {
                 font-family: $mySecondFont;
                 font-weight: 700;
                 font-size: 4rem;
-                line-height: 1;
                 text-shadow: 0 0 5px $myWhite, 0 0 15px $myWhite, 0 0 30px $myWhite;
                 margin: 0 0.5em 0.2em 0.5em;
 
@@ -469,7 +470,6 @@ p {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1;
     color: $myGrey;
 
     padding-top: 0.2em; //Font-fix.
@@ -505,7 +505,6 @@ p {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1;
     color: $myWhite;
 
     padding-top: 0.2em; //Font-fix.
@@ -763,8 +762,6 @@ p {
 
                 text-decoration: none;
                 font-size: 1.8rem;
-                font-weight: 300;
-                line-height: 1;
                 color: $myGrey;
 
                 transition: all 0.3s ease;
